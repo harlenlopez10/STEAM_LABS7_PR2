@@ -25,7 +25,7 @@ public class Login extends javax.swing.JFrame {
         this.setExtendedState(this.MAXIMIZED_BOTH);
         this.setResizable(false);
         this.setLocationRelativeTo(null);
-        users.add(new Usuarios("Harlenlopez","admin","supersecreto",18,1));
+        users.add(new Usuarios("admin","supersecreto",18,"administrador"));
         
     }
     public static String usuarioLogin="";

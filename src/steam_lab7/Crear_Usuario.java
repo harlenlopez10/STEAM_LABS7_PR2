@@ -5,7 +5,9 @@
 package steam_lab7;
 
 import java.awt.Image;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Calendar;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
@@ -24,9 +26,15 @@ public class Crear_Usuario extends javax.swing.JFrame {
         this.setResizable(false);
         this.setLocationRelativeTo(null);
         //recordar borrar esto
-        users.add(new Usuarios("HarlenLopez","admin","supersecreto",18,1));
+        try{
+            doUsers();
+        }catch(Exception e){
+            users.add(new Usuarios("admin","supersecreto",18,"administrador"));
+        }
     }
-    public static Usuarios llamar=new Usuarios("","","",0,0);
+    
+    public static Steam steam = new Steam();
+    public static Usuarios llamar=new Usuarios("","",0,"");
     public static ArrayList<Usuarios> users =new ArrayList<>();
     public static int cantidadeusuarios=1;
     public static int edadCrear=0;
@@ -152,7 +160,7 @@ public class Crear_Usuario extends javax.swing.JFrame {
             if(puedeAvanzar1==true){                    
             int error=0;
            
-            users.add(new Usuarios(nombreCrear,usuarioCrear,contraseñaCrear,edadCrear,error));
+            users.add(new Usuarios(usuarioCrear,contraseñaCrear,edadCrear,""));
             JOptionPane.showMessageDialog(null, "Ha creado exitosamente su cuenta.");
             cantidadeusuarios++;
             puedeAvanzar=false;
@@ -230,4 +238,14 @@ public class Crear_Usuario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
+    
+    public void doUsers() throws IOException{
+        users.clear();
+        users.add(new Usuarios("admin","supersecreto",18,"Administrador"));
+        steam.players.seek(0);
+        while(steam.players.getFilePointer() > steam.players.length()){
+            users.add(new Usuarios(steam.players.readUTF(),steam.players.readUTF(),
+            Calendar.getInstance().getTimeInMillis()-steam.players.readLong()/(365 * 24 * 60 * 60 * 1000),steam.players.readUTF()));
+        }
+    }
 }

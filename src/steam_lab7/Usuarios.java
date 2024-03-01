@@ -13,21 +13,23 @@ import java.util.ArrayList;
  */
 public class Usuarios {
     private String user;
-    private String name;
     private String password;
-    private int edad;
+    private long edad;
     private int tipo;
     
-    public Usuarios(String name,String user,String password,int edad,int tipo){
-        this.name=name;
+    public Usuarios(String user,String password,long edad,String tipo){
         this.user=user;
         this.password=password;
         this.edad=edad;
-        this.tipo=tipo;
-    }
-    
-    public String getName(){
-        return name;
+        switch(tipo.toLowerCase()){
+            case "administrador":
+                this.tipo=0;
+                break;
+            default:
+                this.tipo=1;
+                break;
+        }
+        
     }
     
     public String getUser(){
@@ -38,16 +40,12 @@ public class Usuarios {
         return password;
     }
     
-    public int getEdad(){
+    public long getEdad(){
         return edad;
     }
     
     public int getTipo(){
         return tipo;
-    }
-    
-    public String setName(String name){
-        return this.name=name;
     }
     
     public String setUser(String user){
@@ -58,7 +56,7 @@ public class Usuarios {
         return this.password=password;
     }
     
-    public int setEdad(int edad){
+    public long setEdad(int edad){
         return this.edad=edad;
     }
     
