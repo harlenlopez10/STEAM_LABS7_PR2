@@ -24,6 +24,7 @@ public class Crear_Usuario extends javax.swing.JFrame {
     public Crear_Usuario() {
         initComponents();
         this.setResizable(false);
+        this.setExtendedState(this.MAXIMIZED_BOTH);
         this.setLocationRelativeTo(null);
         //recordar borrar esto
         try{
@@ -69,15 +70,15 @@ public class Crear_Usuario extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Contraseña:");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 490, -1, -1));
-        jPanel1.add(PasswordTextbox, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 490, 270, 40));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 400, 140, 40));
+        jPanel1.add(PasswordTextbox, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 400, 270, 40));
 
         UsuarioTextbox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 UsuarioTextboxActionPerformed(evt);
             }
         });
-        jPanel1.add(UsuarioTextbox, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 370, 270, 40));
+        jPanel1.add(UsuarioTextbox, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 220, 270, 40));
 
         cancelar.setText("Cancelar");
         cancelar.addActionListener(new java.awt.event.ActionListener() {
@@ -85,21 +86,21 @@ public class Crear_Usuario extends javax.swing.JFrame {
                 cancelarActionPerformed(evt);
             }
         });
-        jPanel1.add(cancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 630, -1, 50));
-        jPanel1.add(NombreTextbox, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 430, 270, 40));
+        jPanel1.add(cancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 610, 90, 50));
+        jPanel1.add(NombreTextbox, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 310, 270, 40));
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Nombre:");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 440, -1, 24));
-        jPanel1.add(EdadTextbox, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 550, 100, 40));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 310, -1, 40));
+        jPanel1.add(EdadTextbox, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 480, 100, 40));
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Edad");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 560, 170, 24));
+        jLabel4.setText("Edad:");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 490, 70, 24));
 
         Crear_usuario.setText("Crear Usuario");
         Crear_usuario.addActionListener(new java.awt.event.ActionListener() {
@@ -107,13 +108,13 @@ public class Crear_Usuario extends javax.swing.JFrame {
                 Crear_usuarioActionPerformed(evt);
             }
         });
-        jPanel1.add(Crear_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 630, -1, 50));
+        jPanel1.add(Crear_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 600, -1, 50));
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Usuario:");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 380, -1, 24));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 230, -1, 24));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -123,7 +124,9 @@ public class Crear_Usuario extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1086, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1074, Short.MAX_VALUE))
         );
 
         pack();
