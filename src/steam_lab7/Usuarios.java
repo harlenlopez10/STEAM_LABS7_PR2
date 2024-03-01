@@ -4,6 +4,7 @@
  */
 package steam_lab7;
 
+import java.awt.Image;
 import java.util.ArrayList;
 
 /**
@@ -11,19 +12,20 @@ import java.util.ArrayList;
  * @author adalb
  */
 public class Usuarios {
-    public static Usuarios u=new Usuarios("","","",0,0);
     private String user;
     private String name;
     private String password;
     private int edad;
     private int tipo;
+    private Image image;
     
-    public Usuarios(String name,String user,String password,int edad,int tipo){
+    public Usuarios(String name,String user,String password,int edad,int tipo, Image image){
         this.name=name;
         this.user=user;
         this.password=password;
         this.edad=edad;
         this.tipo=tipo;
+        this.image = image;
     }
     
     public String getName(){
@@ -65,4 +67,10 @@ public class Usuarios {
     public int setTipo(int tipo){
         return this.tipo=tipo;
     }
+
+    public Image getImage() {
+        return image;
+    }
+    
+    
 }
