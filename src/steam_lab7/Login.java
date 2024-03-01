@@ -59,6 +59,8 @@ public class Login extends javax.swing.JFrame {
         jLabel2.setText("Contraseña:");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 490, 160, -1));
 
+        Ingresar.setBackground(new java.awt.Color(255, 255, 0));
+        Ingresar.setForeground(new java.awt.Color(0, 0, 0));
         Ingresar.setText("Ingresar");
         Ingresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,6 +87,8 @@ public class Login extends javax.swing.JFrame {
         jLabel3.setText("LOGIN");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 290, 135, 60));
 
+        jButton1.setBackground(new java.awt.Color(255, 255, 0));
+        jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("REGISTRAR USUARIO");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
