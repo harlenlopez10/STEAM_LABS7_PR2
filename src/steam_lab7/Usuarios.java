@@ -17,15 +17,13 @@ public class Usuarios {
     private String password;
     private int edad;
     private int tipo;
-    private Image image;
     
-    public Usuarios(String name,String user,String password,int edad,int tipo, Image image){
+    public Usuarios(String name,String user,String password,int edad,int tipo){
         this.name=name;
         this.user=user;
         this.password=password;
         this.edad=edad;
         this.tipo=tipo;
-        this.image = image;
     }
     
     public String getName(){
@@ -66,10 +64,6 @@ public class Usuarios {
     
     public int setTipo(int tipo){
         return this.tipo=tipo;
-    }
-
-    public Image getImage() {
-        return image;
     }
     
     

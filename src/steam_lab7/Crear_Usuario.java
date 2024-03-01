@@ -4,7 +4,9 @@
  */
 package steam_lab7;
 
+import java.awt.Image;
 import java.util.ArrayList;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
@@ -25,7 +27,7 @@ public class Crear_Usuario extends javax.swing.JFrame {
         users.add(new Usuarios("HarlenLopez","admin","supersecreto",18,1));
     }
     public static Usuarios llamar=new Usuarios("","","",0,0);
-    public static ArrayList<Usuarios> users=new ArrayList<>();
+    public static ArrayList<Usuarios> users =new ArrayList<>();
     public static int cantidadeusuarios=1;
     public static int edadCrear=0;
     public static boolean puedeAvanzar=false,puedeAvanzar1=false;
